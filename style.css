@@ -1,0 +1,136 @@
+                body {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                    background-color: rgb(33, 33, 33);
+                }
+                
+                .orbit {
+                    position: relative;
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    transform: scaleX(5);
+                }
+                
+                .route {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    animation: rotate 12s infinite linear;
+                }
+                
+                .correct {
+                    animation: correct 12s infinite linear;
+                    position: absolute;
+                    left: 0px;
+                }
+                
+                .pa2 {
+                    left: 85px;
+                    z-index: 500;
+                }
+                
+                .pa3 {
+                    left: 42.5px;
+                    top: 75px;
+                    z-index: 300;
+                }
+                
+                .planet {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    transform: scaleX(0.2);
+                }
+                
+                .sun {
+                    position: absolute;
+                    left: 25px;
+                    background-color: rgb(248, 244, 163);
+                    box-shadow: 0 0 60px rgb(253, 203, 163), 0 0 98px rgb(184, 160, 26);
+                }
+                
+                .a1 {
+                    scale: 0.5;
+                    background: linear-gradient(115deg, rgb(0, 0, 0) 5.8%, rgb(178, 14, 14) 112.6%);
+                }
+                
+                .a2 {
+                    scale: 0.5;
+                    background: linear-gradient(111.1deg, rgb(0, 40, 70) -4.8%, rgb(255, 115, 115) 82.7%, rgb(255, 175, 123) 97.2%);
+                }
+                
+                .a3 {
+                    scale: 0.5;
+                    background: linear-gradient(109.6deg, rgb(20, 30, 48) 11.2%, rgb(36, 59, 85) 91.1%);
+                }
+                
+                @keyframes rotate {
+                    0% {
+                        transform: rotateZ(0deg)
+                    }
+                    100% {
+                        transform: rotateZ(360deg);
+                    }
+                }
+                
+                @keyframes correct {
+                    0% {
+                        transform: rotateZ(360deg)
+                    }
+                    100% {
+                        transform: rotateZ(0deg);
+                    }
+                }
+                
+                .index1 {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    animation: a 12s infinite linear;
+                }
+                
+                .index2 {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    animation: b 12s infinite linear;
+                }
+                
+                .index3 {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    animation: c 12s infinite linear;
+                }
+                
+                @keyframes a {
+                    0% {
+                        z-index: -1;
+                    }
+                    100% {
+                        z-index: 1;
+                    }
+                }
+                
+                @keyframes b {
+                    0% {
+                        z-index: -100;
+                    }
+                    100% {
+                        z-index: -100;
+                    }
+                }
+                
+                @keyframes c {
+                    0% {
+                        z-index: -100;
+                    }
+                    100% {
+                        z-index: -100;
+                    }
+                }
